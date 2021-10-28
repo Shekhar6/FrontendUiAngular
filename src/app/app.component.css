@@ -1,0 +1,33 @@
+.container-sub{
+    background-color: #0984e3;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub-container{
+    margin-left: 10px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+}
+li{
+    margin-right: 80px;
+    list-style: none;
+    padding: 9px 30px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+li:hover{
+    
+    background-color: white;
+    color: #0984e3;
+}
+
+.Active:active,.Active:focus{
+    color: tomato;
+    background-color: white;
+}

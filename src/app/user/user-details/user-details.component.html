@@ -1,0 +1,22 @@
+
+<div class="container">
+<table class=" table table-bodered">
+    <tr>
+        <th>FirstName</th>
+        <th>MiddleName</th>
+        <th>LastName</th>
+        <th>Gender</th>
+        <th>Username</th>
+        <th>Email</th>
+    </tr>
+    <tr *ngFor="let item of userDetail">
+        <td>{{item.firstname}}</td>
+        <td [textContent]="getValue(item.middlename)">{{item.middlename}}</td>
+        <td>{{item.lastname}}</td>
+        <td [style] = "getColor(item.gender)">{{item.gender}}</td>
+        <td>{{item.username}}</td>
+        <td>{{item.email}}</td>
+    </tr>
+</table>
+
+</div>
