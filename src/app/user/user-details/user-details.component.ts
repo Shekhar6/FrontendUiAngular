@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-user-details',
@@ -6,15 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-details.component.css']
 })
 export class UserDetailsComponent  {
-
-
-  userDetail = [
-    {firstname:'shekhar',middlename:'',lastname:'polepaka',gender:'male',username:'pshekhar',email:'shekhar@gmail.com'},
-    {firstname:'ramya',middlename:'kumari',lastname:'pasula',gender:'female',username:'pasulaRamya',email:'pasula@gmail.com'},
-    {firstname:'venkat',middlename:'rao',lastname:'jangili',gender:'male',username:'venkatJ',email:'venkatRao@gmail.com'},
-    {firstname:'rajini',middlename:'',lastname:'B',gender:'female',username:'rajini123',email:'rajini12@gmail.com'},
-    {firstname:'shiva',middlename:'kumar',lastname:'regonda',gender:'male',username:'sregonda',email:'shiva@gmail.com'},
-  ]
+public userDetail;
+constructor(private userService: UserService){
+  this.userDetail = userService.getUserDetails();
+}
 
   getColor(value){
 

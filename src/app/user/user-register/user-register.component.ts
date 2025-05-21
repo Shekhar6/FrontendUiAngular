@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl,FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-user-register',
@@ -18,8 +19,13 @@ export class UserRegisterComponent  {
     password:new FormControl('',Validators.required)
 
   })
-  OnSubmit(){
-    console.log(this.register.value)
 
+  /**
+   *
+   */
+  constructor(private userService: UserService) {
+  }
+  OnSubmit(){
+    this.userService.pushUserDetaails(this.register.value);
   }
 }
